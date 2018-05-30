@@ -1,5 +1,5 @@
 {
-  "name": "WebMatrixExpressSite",
+  "name": "AzureBotFramework",
   "version": "0.2.0",
   "author": "The WebMatrix Team <webmatrix@microsoft.com>",
   "description": "A simple boilerplate for building node applications on Windows Azure (or wherever)",
@@ -11,8 +11,10 @@
   ],
   "main": "./server.js",
   "keywords": [
+    "axios",
     "azure",
-    "boilerplate",
+    "botbuilder",
+    "coreui",
     "express"
   ],
   "dependencies": {
@@ -21,7 +23,7 @@
     "botbuilder": "^3.14.1",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.3",
-    "express": "^4.14.0",
+    "express": "~3.1.0",
     "jade": "*"
   },
   "noAnalyze": true,
