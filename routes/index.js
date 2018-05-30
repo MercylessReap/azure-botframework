@@ -3,6 +3,6 @@
  * GET home page.
  */
 
-exports.index = (req, res)=>{
-  res.render('pages/auth/login', { title: 'Express' });
+exports.index = function(req, res){
+  res.render('index', { title: 'Express' });
 };
