@@ -1,0 +1,28 @@
+<div class="modal fade bd-train-modal" tabindex="-1" role="dialog" aria-labelledby="trainDepartment" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Train <% if(typeof data !== 'undefined'){%><%=data.friendlyName%><%}%></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="trainP">Department training Status <span class="btn-right"><button class="btn btn-info" onclick = 'trainModal("<%=data._id%>")'>Train Department</button></span></p>
+          </div>
+          <table id="train-table"class=" table-hover ">
+            <thead>
+              <tr>
+                <th scope="col">Intent Name</th>
+                <th scope="col">Status</th>
+                <th scope="col">Reason</th>
+              </tr>
+            </thead>
+            <tbody id="train-list">
+
+            </tbody>
+          </table>
+          </br>
+        </div>
+    </div>
+</div>

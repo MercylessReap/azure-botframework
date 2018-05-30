@@ -1,0 +1,60 @@
+<header class="app-header navbar">
+    <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img class="navbar-brand-full" src="https://media.cdn.gradconnection.com/uploads/f1a03d5e-bb4e-4d81-8a64-db7fe9631369-dimensions-data.jpg" width="89" height="25" alt="CoreUI Logo">
+      <img class="navbar-brand-minimized" src="https://assets.gitlab-static.net/uploads/-/system/group/avatar/104644/logo-dimension-data.jpg" width="30" height="30" alt="CoreUI Logo">
+    </a>
+    <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="nav navbar-nav d-md-down-none">
+      <li class="nav-item px-3">
+        <a class="nav-link active" href="/dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item px-3">
+        <a class="nav-link" href="/department">Department</a>
+      </li>
+      <li class="nav-item px-3">
+        <a class="nav-link" href="/team">Team</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav ml-auto">
+      <% if(user.perm.wizard === true){%>
+      <li class="nav-item d-md-down-none">
+        <a id="alerts" class="nav-link icon-bell" href="/alerts">
+          <span class="badge badge-pill badge-danger">5</span>
+        </a>
+      </li>
+      <%}%>
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <img class="img-avatar" src="../../img/avatars/user.png" alt="<%=user.email%>" title="<%=user.name%>">
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <% if(user.perm.wizard === true){%>
+          <div class="dropdown-header text-center">
+            <strong>Settings</strong>
+          </div>
+          <a class="dropdown-item" href="/portal-config">
+            <i class="fa fa-wrench"></i>Site Config</a>
+            <%}%>
+          <div class="dropdown-header text-center">
+            <strong>Account</strong>
+          </div>
+          <a class="dropdown-item" href="/user/<%=user.id%>">
+            <i class="fa fa-user"></i> Profile</a>
+          <div class="divider"></div>
+          <a class="dropdown-item nav-link-success" href="/auth/logout">
+            <i class="fa fa-lock"></i> Logout</a>
+        </div>
+      </li>
+    </ul>
+    <% /* <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
+      <span class="navbar-toggler-icon"></span>
+    </button> */%>
+  </header>
